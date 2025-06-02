@@ -5,6 +5,7 @@ import Navbar from "./componentss/navbar/navbar"
 import Sidebar from "./componentss/Sidebar/Sidebar"
 //  import Video from "./pages/videos/video"
 const App = () => {
+  console.log("This is app.jsx")
   return (
     <div>
     
@@ -16,7 +17,8 @@ const App = () => {
         </Routes>
         </BrowserRouter> } */}
       <Sidebar/>
-      <About/>
+      <About />
+    
     </div>
   )
 }
