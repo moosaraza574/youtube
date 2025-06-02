@@ -1,23 +1,27 @@
- import React from "react"
+ import React, { useState } from "react"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import About from "./components/about"
 import Navbar from "./componentss/navbar/navbar"
 import Sidebar from "./componentss/Sidebar/Sidebar"
+import Feed from "./components/Feed/feed"
 //  import Video from "./pages/videos/video"
 const App = () => {
-  console.log("This is app.jsx")
+
+  const [sidebar, setsidebar] = useState(true);
   return (
     <div>
     
-      <Navbar />
-      {/* { <BrowserRouter>
+      <Navbar setsidebar={setsidebar } />
+      {/* <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/video' element={<Video/>}/>
+        <Route path='/' element={<Home/>} />
+        <Route path='/video/:categoryId/:videoId' element={<Video/>}/>
         </Routes>
-        </BrowserRouter> } */}
+      </BrowserRouter> */}
+      
       <Sidebar/>
       <About />
+      <Feed/>
     
     </div>
   )
